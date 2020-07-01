@@ -755,7 +755,8 @@ class analisis_termico(object):
         cp_is=self.cp_is(T_superficie) #(cal/g K)
         q_1 = dot_m*(cp_ws*(T_estatica-273.15)+V**2/2/4.1868/1000)
         q_2 = m_in*cp_ws_anterior*(T_s_anterior-273.15)
-        q_3 = dot_me*(cp_ws*(T_superficie-273.15)+Lambda_v)
+        #q_3 = dot_me*(cp_ws*(T_superficie-273.15)+Lambda_v)
+        q_3=0
         m_out = (1-n_0)*(dot_m+m_in)-dot_me
         if m_out < 0: 
             m_out=0
